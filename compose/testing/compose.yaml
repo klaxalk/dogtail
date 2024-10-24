@@ -2,23 +2,23 @@ services:
 
   pes:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line pes'; while true; do echo pes; sleep 0.01; done"
+    command: bash -c "echo '1st line pes'; while true; do echo pes; sleep 1.01; done"
 
   houba:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line houba'; while true; do echo houba; sleep 0.01; done"
+    command: bash -c "echo '1st line houba'; while true; do echo houba; sleep 1.01; done"
 
   kocka:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line kocka'; while true; do echo kocka; sleep 0.01; done"
+    command: bash -c "echo '1st line kocka'; while true; do echo kocka; sleep 1.01; done"
 
   slon:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line slon'; while true; do echo slon; sleep 0.01; done"
+    command: bash -c "echo '1st line slon'; while true; do echo slon; sleep 1.01; done"
 
   had:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line had'; while true; do echo had; sleep 0.01; done"
+    command: bash -c "echo '1st line had'; while true; do echo had; sleep 1.01; done"
 
   logger:
 

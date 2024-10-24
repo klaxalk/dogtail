@@ -15,7 +15,8 @@ cd ${MY_PATH}
 ## |                            setup                           |
 ## --------------------------------------------------------------
 
-LOCAL_TAG=klaxalk/docker_logger:latest
+LOCAL_TAG=docker_logger:latest
+REGISTRY=klaxalk
 
 EXPORT_PATH=~/docker
 
@@ -23,4 +24,4 @@ EXPORT_PATH=~/docker
 ## |                           export                           |
 ## --------------------------------------------------------------
 
-docker save ${LOCAL_TAG} | gzip > ${EXPORT_PATH}/${LOCAL_TAG}.tar.gz
+docker save ${REGISTRY}/${LOCAL_TAG} | gzip > ${EXPORT_PATH}/${REGISTRY}_${LOCAL_TAG}.tar.gz
