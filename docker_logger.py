@@ -165,21 +165,19 @@ if __name__ == "__main__":
 
             for container in containers:
 
-                if container.name != my_container_name:
+                name=container.name
+                container_id=container.id
+                service_name=container.labels.get('com.docker.compose.service')
 
-                    name=container.name
-                    container_id=container.id
-                    service_name=container.labels.get('com.docker.compose.service')
+                if container_id not in container_map.keys():
 
-                    if container_id not in container_map.keys():
+                    print("[Info]: New container detected: name={}, id={}, service_name={}".format(name, container_id, service_name))
 
-                        print("[Info]: New container detected: name={}, id={}, service_name={}".format(name, container_id, service_name))
+                    process = multiprocessing.Process(target=log_container, args=(name, container_id, service_name, log_folder))
 
-                        process = multiprocessing.Process(target=log_container, args=(name, container_id, service_name, log_folder))
+                    container_map[container_id] = process
 
-                        container_map[container_id] = process
-
-                        process.start()
+                    process.start()
 
         keys_to_remove = []
 
