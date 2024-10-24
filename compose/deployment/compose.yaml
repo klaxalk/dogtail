@@ -6,4 +6,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./logs:/etc/logs
 
-    image: logger
+    image: docker_logger

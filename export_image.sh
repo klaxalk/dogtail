@@ -23,4 +23,4 @@ EXPORT_PATH=~/docker
 ## |                           export                           |
 ## --------------------------------------------------------------
 
-docker save ${LOCAL_TAG} | gzip > ${LOCAL_TAG}.tar.gz
+docker save ${LOCAL_TAG} | gzip > ${EXPORT_PATH}/${LOCAL_TAG}.tar.gz
