@@ -1,0 +1,22 @@
+services:
+
+  pes:
+
+    image: ubuntu:20.04
+
+    command: bash -c "while true; do echo pes; sleep 1; done"
+
+  houba:
+
+    image: ubuntu:20.04
+
+    command: bash -c "while true; do echo houba; sleep 1; done"
+
+  logger:
+
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /var/lib/docker/volumes:/var/lib/docker/volumes
+      - ./logs:/etc/logs
+
+    image: logger
