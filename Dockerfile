@@ -1,14 +1,6 @@
-FROM ubuntu:20.04
+FROM alpine
 
-RUN apt-get -y update && apt-get -y install sudo
-
-# workaround interractive prompts during apt installations
-RUN echo 'debconf debconf/frontend select Noninteractive' | sudo debconf-set-selections
-RUN DEBIAN_FRONTEND=noninteractive apt-get -y install keyboard-configuration
-
-RUN apt -y install python3-pip
-
-RUN pip3 install docker
+RUN apk add --update --no-cache python3 py3-docker-py && ln -sf python3 /usr/bin/python
 
 COPY docker_logger.py /
 

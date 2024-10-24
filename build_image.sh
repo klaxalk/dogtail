@@ -2,4 +2,4 @@
 
 docker buildx use default
 
-docker build . --file Dockerfile --tag logger
+docker build . --file Dockerfile --tag docker_logger
