@@ -6,7 +6,7 @@ import multiprocessing
 import time
 import datetime
 
-def log_container(container_name, container_id, service_name, log_folder):
+def log_container(container_name, container_id, service_name, log_folder, since_time):
 
     client = docker.from_env()
 
@@ -20,7 +20,7 @@ def log_container(container_name, container_id, service_name, log_folder):
 
         os.chmod(file_path, 0o666)
 
-        for line in container.logs(stream=True, follow=True, since=int(time.time())):
+        for line in container.logs(stream=True, follow=True, since=int(since_time)-1):
 
             ascii_line = line.decode('ASCII')
 
@@ -94,6 +94,8 @@ if __name__ == "__main__":
 
     print("[Info]: starting")
 
+    since_time=time.time()
+
     try:
         client = docker.from_env()
     except:
@@ -140,7 +142,7 @@ if __name__ == "__main__":
 
                         print("New container detected: {}, {}, {}".format(name, container_id, service_name))
 
-                        process = multiprocessing.Process(target=log_container, args=(name, container_id, service_name, log_folder))
+                        process = multiprocessing.Process(target=log_container, args=(name, container_id, service_name, log_folder, since_time))
 
                         container_map[container_id] = process
 

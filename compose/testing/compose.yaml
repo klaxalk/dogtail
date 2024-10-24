@@ -4,13 +4,13 @@ services:
 
     image: ubuntu:20.04
 
-    command: bash -c "while true; do echo pes; sleep 1; done"
+    command: bash -c "echo '1st line pes'; while true; do echo pes; sleep 1; done"
 
   houba:
 
     image: ubuntu:20.04
 
-    command: bash -c "while true; do echo houba; sleep 1; done"
+    command: bash -c "echo '1st line houba'; while true; do echo houba; sleep 1; done"
 
   logger:
 
