@@ -4,6 +4,6 @@ services:
 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - ./logs:/etc/logs
+      - logs:/etc/logs:consistent
 
     image: klaxalk/docker_logger:latest
