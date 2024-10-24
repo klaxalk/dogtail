@@ -15,7 +15,7 @@ cd ${MY_PATH}
 ## |                            setup                           |
 ## --------------------------------------------------------------
 
-LOCAL_TAG=docker_logger
+LOCAL_TAG=klaxalk/docker_logger:latest
 
 EXPORT_PATH=~/docker
 
