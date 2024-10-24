@@ -92,15 +92,21 @@ def list_containers_in_compose_project():
 
 if __name__ == "__main__":
 
-    print("starting")
+    print("[Info]: starting")
+
+    try:
+        client = docker.from_env()
+    except:
+        print("[Error]: can not connect to docker daemon. Have you monted the docker sock?")
+        exit()
 
     in_compose, project_name, service_name = is_part_of_compose()
 
-    if not in_compose:
-        print("No other containers found in the same Compose project.")
-        exit()
-
     my_container_name = get_container_name()
+
+    if not os.path.exists("/etc/logs"):
+        print("[Error]: the directory '/etc/logs' does not exist. Please mount it as a docker volume from outside.")
+        exit()
 
     log_folder = "/etc/logs/"+datetime.datetime.now().replace(microsecond=0).isoformat()
 
@@ -142,11 +148,3 @@ if __name__ == "__main__":
 
         else:
             print("No other containers found in the same Compose project.")
-
-    client = docker.from_env()
-
-    containers = client.containers.list()
-
-    for container in containers:
-
-        name = container.attrs['Config']['Image']

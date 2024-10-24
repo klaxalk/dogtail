@@ -10,6 +10,6 @@ RUN apt -y install python3-pip
 
 RUN pip3 install docker
 
-COPY log.py /
+COPY docker_logger.py /
 
-CMD ["python3", "-u", "/log.py"]
+CMD ["python3", "-u", "/docker_logger.py"]
