@@ -1,5 +1,7 @@
 # DoGTail (Simple Docker Logger)
 
+![](./.fig/logo.webp)
+
 **DoGTail** (**Docker Go Tail**) is a lightweight, zero-configuration logging adapter for Docker Compose.
 It automatically tails the stdout and stderr streams from all containers in a Compose session, storing them in organized, plaintext log files for easy access.
 
@@ -52,7 +54,7 @@ Once *DoGTail* starts, it immediately begins tailing the stdout and stderr outpu
 Logs are stored in plain text files under `/etc/logs` inside a new folder named by the current date and time (in ISO 8601 format).
 This makes tracking and organizing logs simple and intuitive.
 
-## *DoGTail*: Docker Go Tail
+## DoGTail: Docker Go Tail
 
 * *Do*cker *G*o *Tail* starts autonomously and captures logs as soon as Docker Compose is running.
 * No extra configuration required—just set it up, and *DoGTail* handles the rest.
