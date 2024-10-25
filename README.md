@@ -22,7 +22,7 @@ services:
 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
-      - logs:/etc/logs:consistent
+      - ./logs:/etc/logs
 
     image: klaxalk/dogtail:latest
 ```
