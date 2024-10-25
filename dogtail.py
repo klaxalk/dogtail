@@ -20,11 +20,11 @@ def log_container(container_name, container_id, service_name, log_folder):
 
         os.chmod(file_path, 0o666)
 
-        for line in container.logs(stream=True, follow=True, since=int(time.time())-1):
+        for line in container.logs(stream=True, follow=True, timestamps=True, since=int(time.time())-1):
 
             ascii_line = line.decode('ASCII')
 
-            outfile.write("[{:.6f}]: {}".format(time.time(), ascii_line))
+            outfile.write("{}".format(ascii_line))
 
             outfile.flush()
 
