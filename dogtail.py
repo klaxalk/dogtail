@@ -179,15 +179,19 @@ if __name__ == "__main__":
 
                     process.start()
 
+        # marking the processes to be removed for stopped containers
+
         keys_to_remove = []
 
         for proc in container_map.keys():
 
             if not container_map[proc].is_alive():
 
-                print("[Info]: The main process detected that the container {} died.".format(proc))
+                print("[Info]: The main process detected that the container {} has died.".format(proc))
 
                 keys_to_remove.append(proc)
+
+        # remove the processes
 
         for key in keys_to_remove:
 

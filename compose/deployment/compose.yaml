@@ -6,4 +6,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - logs:/etc/logs:consistent
 
-    image: klaxalk/docker_logger:latest
+    image: klaxalk/dogtail:latest

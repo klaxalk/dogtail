@@ -1,24 +1,24 @@
 services:
 
-  pes:
+  dog:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line pes'; while true; do echo pes; sleep 1.01; done"
+    command: bash -c "echo '1st line dog'; while true; do echo dog; sleep 1.01; done"
 
-  houba:
+  cow:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line houba'; while true; do echo houba; sleep 1.01; done"
+    command: bash -c "echo '1st line cow'; while true; do echo cow; sleep 1.01; done"
 
-  kocka:
+  cat:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line kocka'; while true; do echo kocka; sleep 1.01; done"
+    command: bash -c "echo '1st line cat'; while true; do echo cat; sleep 1.01; done"
 
-  slon:
+  elephant:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line slon'; while true; do echo slon; sleep 1.01; done"
+    command: bash -c "echo '1st line elephant'; while true; do echo elephant; sleep 1.01; done"
 
-  had:
+  mouse:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line had'; while true; do echo had; sleep 1.01; done"
+    command: bash -c "echo '1st line mouse'; while true; do echo mouse; sleep 1.01; done"
 
   logger:
 
@@ -26,5 +26,4 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./logs:/etc/logs
 
-    image: klaxalk/docker_logger:latest
-
+    image: klaxalk/dogtail:latest
