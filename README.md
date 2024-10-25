@@ -19,12 +19,10 @@ To integrate **DoGTail** into your Docker Compose setup, simply add the followin
 services:
 
   dogtail:
-
+    image: klaxalk/dogtail:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./logs:/etc/logs
-
-    image: klaxalk/dogtail:latest
 ```
 
 ## Volume Configuration
