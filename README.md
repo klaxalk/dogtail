@@ -11,6 +11,11 @@ It automatically *tails* the *stdout* and *stderr* streams from all containers i
 * **Plaintext Storage**: Logs are saved as plain text files in timestamped folders.
 * **Zero Configuration**: No need for custom settings or complex setups.
 
+## Use Case
+
+* Air-gapped machines with minimal infrastructure to maintain log history.
+* Backup logging mechanism for robotic applications (**ROS**, **ROS2**).
+
 ## Quick Start
 
 To integrate **DoGTail** into your Docker Compose setup, simply add the following service to your `docker-compose.yml` file:
