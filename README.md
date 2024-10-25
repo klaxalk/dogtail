@@ -74,24 +74,24 @@ services:
 
 ## How It Works
 
-Once *DoGTail* starts, it immediately begins tailing the stdout and stderr outputs of all containers.
+Once **DoGTail** starts, it immediately begins tailing the stdout and stderr outputs of all containers.
 Logs are stored in plain text files under `/etc/logs` inside a new folder named by the current date and time (in ISO 8601 format).
 This makes tracking and organizing logs simple and intuitive.
 
 ## DoGTail: Docker Go Tail
 
-* *Do*cker *G*o *Tail* starts autonomously and captures logs as soon as Docker Compose is running.
+* **Do**cker **G**o **Tail** starts autonomously and captures logs as soon as Docker Compose is running.
 * No extra configuration required—just set it up, and *DoGTail* handles the rest.
 
 This project is licensed under the MIT License.
 
 ## Location of the logs
 
-The logs can be found in the provided folder:
+**The logs can be found in the provided folder:**
 
 ![](./.fig/log_folders.png)
 
-Each folder contains separate files for the container logs within the compose session:
+**Each folder contains separate files for the container logs within the compose session:**
 
 ![](./.fig/logs.png)
 
