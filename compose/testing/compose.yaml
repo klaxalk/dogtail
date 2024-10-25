@@ -20,7 +20,7 @@ services:
     image: ubuntu:20.04
     command: bash -c "echo '1st line mouse'; while true; do echo mouse; sleep 1.01; done"
 
-  logger:
+  dogtail:
 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

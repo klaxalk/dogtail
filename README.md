@@ -18,7 +18,7 @@ To integrate **DoGTail** into your Docker Compose setup, simply add the followin
 ```yaml
 services:
 
-  logger:
+  dogtail:
 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -42,7 +42,7 @@ services:
     image: your-image
     # your app configuration here
 
-  logger:
+  dogtail:
     image: klaxalk/dogtail:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
@@ -62,7 +62,7 @@ services:
     image: your-image
     # your app configuration here
 
-  logger:
+  dogtail:
     image: klaxalk/dogtail:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock

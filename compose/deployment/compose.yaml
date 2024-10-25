@@ -1,6 +1,6 @@
 services:
 
-  logger:
+  dogtail:
 
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
