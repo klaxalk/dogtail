@@ -83,7 +83,11 @@ This project is licensed under the MIT License.
 ## Location of the logs
 
 The logs can be found in the provided folder:
+
 ![](./.fig/log_folders.png)
 
-Each folder contains separate files for the containers within the compose session:
+Each folder contains separate files for the container logs within the compose session:
+
 ![](./.fig/logs.png)
+
+The images above originate from [Portainer.io](https://github.com/portainer/portainer).
