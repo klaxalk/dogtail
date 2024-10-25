@@ -1,4 +1,4 @@
-# DoGTail (Simple Docker Logger)
+# DoGTail (Simple Plaintext Docker Logger)
 
 <img src="./.fig/logo.webp" align="right" height="300" width="300" >
 
