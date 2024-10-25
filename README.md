@@ -79,3 +79,11 @@ This makes tracking and organizing logs simple and intuitive.
 * No extra configuration required—just set it up, and *DoGTail* handles the rest.
 
 This project is licensed under the MIT License.
+
+## Location of the logs
+
+The logs can be found in the provided folder:
+![](./.fig/log_folders.png)
+
+Each folder contains separate files for the containers within the compose session:
+![](./.fig/logs.png)
