@@ -1,9 +1,9 @@
 # DoGTail (Simple Plaintext Docker Logger)
 
-<img src="./.fig/logo.webp" align="right" height="300" width="300" >
+<img src="./.fig/logo.webp" align="right" height="200" width="200" >
 
 **DoGTail** (**Docker Go Tail**) is a lightweight, zero-configuration logging sidecar Docker Compose.
-It automatically *tails* the *stdout* and *stderr* streams from all containers in a Compose session, storing them in organized, plaintext log files for easy access.
+It automatically **tails** the **stdout** and **stderr** streams from all containers in a Compose session, storing them in organized, plaintext log files for easy access.
 
 ## Features
 
