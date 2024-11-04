@@ -2,28 +2,31 @@ services:
 
   dog:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line dog'; while true; do echo dog; sleep 1.01; done"
+    tty: true
+    command: bash -c "echo '1st line dog'; while true; do echo dog; >&2 echo cow; sleep 0.1; done"
 
   cow:
     image: ubuntu:20.04
-    command: bash -c "echo '1st line cow'; while true; do echo cow; sleep 1.01; done"
+    tty: true
+    command: bash -c ">&2 echo '1st line cow'; while true; do >&2 echo cow; sleep 0.01; done"
 
   cat:
     image: ubuntu:20.04
+    tty: true
     command: bash -c "echo '1st line cat'; while true; do echo cat; sleep 1.01; done"
 
   elephant:
     image: ubuntu:20.04
+    tty: true
     command: bash -c "echo '1st line elephant'; while true; do echo elephant; sleep 1.01; done"
 
   mouse:
     image: ubuntu:20.04
+    tty: true
     command: bash -c "echo '1st line mouse'; while true; do echo mouse; sleep 1.01; done"
 
   dogtail:
-
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ./logs:/etc/logs
-
     image: klaxalk/dogtail:latest

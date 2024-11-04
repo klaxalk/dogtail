@@ -1,9 +1,7 @@
 services:
 
   dogtail:
-
+    image: klaxalk/dogtail:latest
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - logs:/etc/logs:consistent
-
-    image: klaxalk/dogtail:latest
