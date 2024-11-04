@@ -43,6 +43,7 @@ services:
 
   myapp:
     image: your-image
+    tty: true # this ensures the stdout and stderr are ordered properly in the logs
     # your app configuration here
 
   dogtail:
@@ -63,6 +64,7 @@ services:
 
   myapp:
     image: your-image
+    tty: true # this ensures the stdout and stderr are ordered properly in the logs
     # your app configuration here
 
   dogtail:
